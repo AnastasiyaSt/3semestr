@@ -1,0 +1,10 @@
+.box{
+height:400px;
+border-bottom:solid 4px;
+position:relative;
+}
+.ball{
+	position: absolute;
+	width: 45px;
+	height: 45px;
+}
