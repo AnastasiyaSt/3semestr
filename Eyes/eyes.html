@@ -1,0 +1,35 @@
+<html>
+<head>
+<style>  @import url("hw.css");</style>
+	<title> Глаза</title>
+</head>
+<body>
+<div id="eyes">
+	<div id="eye-left" class="eye">
+		<div class="eyeball" id="left-ball"></div>
+	</div>
+	<div id="eye-right" class="eye">
+		<div class="eyeball" id="right-ball"></div>
+	</div>
+</div>
+<script>
+	var el1 = document.getElementById('eye-left'), eyeBall1 = el1 = document.getElementById('left-ball') ;
+	var el2 = el1 = document.getElementById('eye-right'), eyeBall2 = el1 = document.getElementById('right-ball');
+	var x1 = el1.getBoundingClientRect().left, y1 = el1.getBoundingClientRect().top ;
+	var r = 17, x , y, x2, y2, isEyeProcessed = false;
+	document.addEventListener("mousemove",(function(e) {
+		if (!isEyeProcessed){
+			isEyeProcessed = true;
+			var x2 = e.pageX, y2 = e.pageY;
+			y = ((r * (y2 - y1)) / Math.sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1))) + y1;
+			x = (((y - y1) * (x2 - x1)) / (y2 - y1)) + x1;
+			eyeBall1.style.marginTop=(y - y1 + 1) + 'px',
+			eyeBall1.style.marginLeft=(x - x1) + 'px';
+			eyeBall2.style.marginTop= (y - y1 + 1) + 'px';
+			eyeBall2.style.marginLeft= (x - x1) + 'px';
+			isEyeProcessed = false;
+		}
+	}));
+</script>
+</body>
+</html>
