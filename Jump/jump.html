@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <style>
+  @import url("jump.css");
+    
+  </style>
+</head>
+
+<body>
+<header> Game</header>
+<div class="box">
+  <img class="ball" id="ball" src="https://cdn1.ozone.ru/multimedia/c1200/1012198481.jpg" onclick="go('ball')">
+</img>
+</div>
+  <script>
+	function go(elem) {
+		let start = Date.now();
+		let ob=document.getElementById(elem);
+        let timer = setInterval(function() {
+			let timePassed = Date.now() - start;
+			if (timePassed <= 1750){
+				ob.style.top = timePassed/5 + 'px';
+			}
+			else{
+				if(timePassed <= 3500)ob.style.top = (3500-timePassed) / 5 + 'px';
+			}
+			if (timePassed > 3500) clearInterval(timer);
+		}, 20);
+	}  
+</script>
+</body>
+
+</html>
