@@ -1,0 +1,34 @@
+#eyes{
+position: relative;
+width: 100%;
+}
+ 
+  
+.eye{
+position: absolute;
+width: 60px;
+height: 61px;
+border-radius:50%;
+border: 3px solid #000000;
+}
+.eyeball{
+position: absolute;
+left: 20px;
+top: 20px;
+width: 10px;
+height: 10px;
+border-radius:50%;
+border: 5px solid #000000;
+background-color: #000;
+
+}
+#eye-left {
+top: 200px;
+left: 50%;
+margin-left:-85px;
+}
+#eye-right {
+top: 200px;
+left: 50%;
+margin-left:-5px;
+}
