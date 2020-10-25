@@ -1,0 +1,41 @@
+body{
+    margin: 0;
+    font-size:24px;
+}
+.container{
+	display: flex;
+	flex-direction: column
+}
+button.btn.btn-primary.dropdown-toggle{
+	background: #707880;
+}
+.cap, .h{
+	display: flex;
+	flex-direction:row;
+}
+
+.image, .publications, .subscriptions, .subscribers{
+	flex:1;
+}
+.image{
+	float:left;
+    height: 150px
+	
+}
+.posts{
+	flex:10;
+}
+.cap{
+	flex:2;
+}
+.menu{text-align:right;}
+.h{justify-content:right;}
+.menu, .myname{
+	flex:1;
+	
+footer{
+	text-align:center;
+    background-color: #ffffff;
+	display:flex;
+	justify-content:center;
+}
